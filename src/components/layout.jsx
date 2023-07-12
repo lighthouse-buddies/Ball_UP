@@ -26,7 +26,7 @@ export default function Layout({ main }) {
                 <div className="flex lg:flex-col lg:flex-1  lg:pt-5 lg:pb-4 w-full">
                     <Link 
                         className="mx-4 lg:mx-5 flex gap-3" 
-                        href=""
+                        href="/"
                     >              
                         <img src="/ballup-logo.png" className='h-7 w-7 lg:h-9 lg:w-9 my-auto'/>
                         <h1 className='text-yellow-500 lg:text-xl font-fredoka-one my-auto'>BallUP</h1>
