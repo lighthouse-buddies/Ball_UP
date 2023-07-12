@@ -1,4 +1,4 @@
-import { prisma } from '../lib/prisma';
+import prisma from '../../lib/prisma';
 
 export const getStaticProps = async () => {
   const games = await prisma.games.findMany({
@@ -10,12 +10,12 @@ export const getStaticProps = async () => {
 
   const feed = games.map((game) => ({
     ...game,
-    createdAt: game.createdAt.toISOString(),
-    startedAt: game.startedAt.toISOString(),
-    endedAt: game.endedAt.toISOString(),
+    createdAt: game.createdAt.toString(),
+    startedAt: game.startedAt.toString(),
+    endedAt: game.endedAt.toString(),
     user: {
       ...game.user,
-      createdAt: game.user.createdAt.toISOString(),
+      createdAt: game.user.createdAt.toString(),
       // Convert any other Date fields in the user object
     },
     // apply similar conversion for any other Date objects and nested objects
@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const HomePage = ({ feed }) => {
+const Databaseinfo = ({ feed }) => {
   return (
     <div>
       {feed.map((game) => (
@@ -40,4 +40,4 @@ const HomePage = ({ feed }) => {
   );
 };
 
-export default HomePage;
+export default Databaseinfo;
