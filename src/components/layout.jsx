@@ -26,10 +26,10 @@ export default function Layout({ main }) {
                 <div className="flex lg:flex-col lg:flex-1  lg:pt-5 lg:pb-4 w-full">
                     <Link 
                         className="mx-4 lg:mx-5 flex gap-3" 
-                        href="/-79.4005188,43.6622882,11"
+                        href=""
                     >              
                         <img src="/ballup-logo.png" className='h-7 w-7 lg:h-9 lg:w-9 my-auto'/>
-                        <h1 className='text-yellow-500 lg:text-xl font-fredoka-one my-auto'>Ball_UP</h1>
+                        <h1 className='text-yellow-500 lg:text-xl font-fredoka-one my-auto'>BallUP</h1>
                     </Link>
                     
                     <nav className="lg:mt-5 flex-1 space-y-1 px-2 lg:ml-0 " aria-label="Sidebar">
